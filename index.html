@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+
+  <title>Camino, Derlyn Bless | Portfolio</title>
+
+  <meta property="og:title" content="Camino, Derlyn Bless | Portfolio" />
+
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="canonical" href="//" />
+
+  <meta property="og:url" content="//" />
+
+  <meta name="description" content="Camino, Derlyn Bless | Portfolio" />
+
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+  <meta name="theme-color" content="" />
+
+  <meta property="og:site_name" content="Camino, Derlyn Bless | Portfolio" />
+
+  <meta property="og:image" content="" />
+
+  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
+
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="preload" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+  <link crossorigin="anonymous" href="/assets/styles/main.min.css" media="screen" rel="stylesheet" />
+
+  <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+</head>
+
+
+<body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
+
+  <div id="main" class="relative">
+    <div x-data="{
+    triggerNavItem(id) {
+        $scroll(id)
+    },
+    triggerMobileNavItem(id) {
+        mobileMenu = false;
+        this.triggerNavItem(id)
+    }
+}">
+      <div class="w-full z-50 fixed top-0 py-3 sm:py-5" style="background-color: #561A7E;">
+        <div class="container flex items-center justify-between">
+          <div>
+            <a href="/">
+              <img src="/assets/img/logo.png" class="w-24 lg:w-48  rounded-xl" alt="logo image" />
+            </a>
+          </div>
+          <div class="hidden lg:block">
+            <ul class="flex items-center">
+
+              <li class="group pl-6">
+
+                <span @click="triggerNavItem('#about')" data-section="about"
+                  class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About</span>
+
+                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              </li>
+
+              <li class="group pl-6">
+
+                <span @click="triggerNavItem('#services')" data-section="services"
+                  class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Services</span>
+
+                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              </li>
+
+              <li class="group pl-6">
+
+                <span @click="triggerNavItem('#portfolio')" data-section="portfolio"
+                  class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
+
+                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              </li>
+
+              <li class="group pl-6">
+
+                <span @click="triggerNavItem('#contact')" data-section="contact"
+                  class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Contact</span>
+
+                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+              </li>
+
+            </ul>
+          </div>
+          <div class="block lg:hidden">
+            <button @click="mobileMenu = true">
+              <i class="bx bx-menu text-4xl text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
+        :class="{ 'opacity-100 pointer-events-auto': mobileMenu }">
+        <div class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
+          <button class="absolute top-0 right-0 mt-4 mr-4" @click="mobileMenu = false">
+            <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
+          </button>
+
+          <ul class="mt-8 flex flex-col">
+
+            <li class="py-2">
+
+              <span @click="triggerMobileNavItem('#about')" data-section="about"
+                class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About</span>
+
+            </li>
+
+            <li class="py-2">
+
+              <span @click="triggerMobileNavItem('#services')" data-section="services"
+                class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Services</span>
+
+            </li>
+
+            <li class="py-2">
+
+              <span @click="triggerMobileNavItem('#portfolio')" data-section="portfolio"
+                class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
+
+            </li>
+
+            <li class="py-2">
+
+              <span @click="triggerMobileNavItem('#contact')" data-section="contact"
+                class="nav-item cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Contact</span>
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+
+      <div>
+        <div class="relative bg-cover bg-center bg-no-repeat py-8"
+          style="background-image: url(/assets/img/bg-hero.jpeg)">
+          <div
+            class="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat">
+          </div>
+
+          <div class="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
+            <div class="flex flex-col items-center justify-center lg:flex-row">
+              <div class="rounded-full border-8 border-primary shadow-xl">
+                <img src="/assets/img/camino_db.png" class="h-48 rounded-full sm:h-56" alt="author" />
+              </div>
+              <div class="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
+                <h1 class="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
+                  Hello I'm Derlyn Bless Camino!
+                </h1>
+                <div class="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
+                  <div class="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
+                    <p class="font-body text-lg uppercase text-white">Let's connect</p>
+                    <div class="hidden sm:block">
+                      <i class="bx bx-chevron-right text-3xl text-yellow"></i>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
+                    <a href="https://www.facebook.com/db.rc.507" target="_blank">
+                      <i class="bx bxl-facebook-square text-2xl text-white hover:text-yellow hover:scale-125"></i>
+                    </a>
+                    <a href="https://www.instagram.com/derl9026?igsh=cmZsaG5jbXN0cHZi" target="_blank" class="pl-4">
+                      <i class="bx bxl-instagram text-2xl text-white hover:text-yellow hover:scale-125"></i>
+                    </a>
+                    <a href="https://ph.linkedin.com/in/derlyn-camino-623803411" target="_blank" class="pl-4">
+                      <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow hover:scale-125"></i>
+                    </a>
+                    <a href="https://github.com/derlyncamino9-cloud" target="_blank" class="pl-4">
+                      <i class="bx bxl-github text-2xl text-white hover:text-yellow hover:scale-125"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-grey-50" id="about">
+          <div class="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
+            <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+              <h2 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+                Who am I?
+              </h2>
+              <h4 class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+                I'm Derlyn Bless, a Graphic and Web Designer
+              </h4>
+              <p class="pt-6 font-body leading-relaxed text-grey-20 text-justify">
+                I'm an Information Systems student with 2 years of experience in designing UI/UX,
+                graphic designs, and multimedia. My journey started in graphic design and multimedia,
+                where I sparked an interest in visual storytelling and motion. As I watched users interact
+                with my designs, I naturally gravitated toward UI/UX design, focusing not just on how a
+                digital product looks but also on how it feels and functions.
+              </p>
+              <div class="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
+                <div class="flex items-center justify-center sm:justify-start">
+                  <p class="font-body text-lg font-semibold uppercase text-primary">
+                    Connect with me
+                  </p>
+                  <div class="hidden sm:block">
+                    <i class="bx bx-chevron-right text-2xl text-primary "></i>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
+                  <a href="https://www.facebook.com/db.rc.507" target="_blank">
+                    <i class="bx bxl-facebook-square text-2xl text-primary hover:text-yellow hover:scale-125"></i>
+                  </a>
+                  <a href="https://www.instagram.com/derl9026?igsh=cmZsaG5jbXN0cHZi" target="_blank" class="pl-4">
+                    <i class="bx bxl-instagram text-2xl text-primary hover:text-yellow hover:scale-125"></i>
+                  </a>
+                  <a href="https://ph.linkedin.com/in/derlyn-camino-623803411" target="_blank" class="pl-4">
+                    <i class="bx bxl-linkedin text-2xl text-primary hover:text-yellow hover:scale-125"></i>
+                  </a>
+                  <a href="https://github.com/derlyncamino9-cloud" target="_blank" class="pl-4">
+                    <i class="bx bxl-github text-2xl text-primary hover:text-yellow hover:scale-125"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
+              <div>
+                <div class="flex items-end justify-between">
+                  <h4 class="font-body font-semibold uppercase text-black">
+                    Multimedia
+                  </h4>
+                  <h3 class="font-body text-3xl font-bold text-primary">90%</h3>
+                </div>
+                <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                  <div class="h-3 rounded-full bg-primary" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="pt-6">
+                <div class="flex items-end justify-between">
+                  <h4 class="font-body font-semibold uppercase text-black">System Analysis</h4>
+                  <h3 class="font-body text-3xl font-bold text-primary">85%</h3>
+                </div>
+                <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                  <div class="h-3 rounded-full bg-primary" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="pt-6">
+                <div class="flex items-end justify-between">
+                  <h4 class="font-body font-semibold uppercase text-black">
+                    System Prototyping
+                  </h4>
+                  <h3 class="font-body text-3xl font-bold text-primary">88%</h3>
+                </div>
+                <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                  <div class="h-3 rounded-full bg-primary" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="pt-6">
+                <div class="flex items-end justify-between">
+                  <h4 class="font-body font-semibold uppercase text-black">System Documentation</h4>
+                  <h3 class="font-body text-3xl font-bold text-primary">85%</h3>
+                </div>
+                <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                  <div class="h-3 rounded-full bg-primary" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="pt-6">
+                <div class="flex items-end justify-between">
+                  <h4 class="font-body font-semibold uppercase text-black">Java Programming</h4>
+                  <h3 class="font-body text-3xl font-bold text-primary">80%</h3>
+                </div>
+                <div class="mt-2 h-3 w-full rounded-full bg-lila">
+                  <div class="h-3 rounded-full bg-primary" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container py-16 md:py-20" id="services">
+          <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+            Here's what I'm good at
+          </h2>
+          <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+            These are the services I offer
+          </h3>
+
+          <div class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3">
+            <!-- Card 1 -->
+            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <div class="hidden group-hover:block">
+                  <img src="/assets/img/icon-design-white.svg" alt="Theme Design icon" />
+                </div>
+                <div class="block group-hover:hidden">
+                  <img src="/assets/img/icon-design-black.svg" alt="Theme Design icon" />
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
+                  Graphic Design
+                </h3>
+                <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+                  Creating visually appealing designs and digital content that communicate ideas effectively and enhance
+                  user engagement.
+                </p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <div class="hidden group-hover:block">
+                  <img src="/assets/img/icon-content-white.svg" alt="content marketing icon" />
+                </div>
+                <div class="block group-hover:hidden">
+                  <img src="/assets/img/icon-content-black.svg" alt="content marketing icon" />
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
+                  Technical Writing
+                </h3>
+                <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+                  Creating clear, concise, and user-friendly documentation that explains complex information in an
+                  easy-to-understand manner.
+                </p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+              <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                <div class="hidden group-hover:block">
+                  <img src="/assets/img/icon-graphics-white.svg" alt="Graphic Design icon" />
+                </div>
+                <div class="block group-hover:hidden">
+                  <img src="/assets/img/icon-graphics-black.svg" alt="Graphic Design icon" />
+                </div>
+              </div>
+              <div class="text-center">
+                <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
+                  System Analysis and Design
+                </h3>
+                <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+                  Analyzing business requirements and designing efficient system solutions to improve processes,
+                  functionality, and user experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="portfolio" style="background-color: #E8CEF5;">
+          <div class="container w-full py-16 md:py-20"">
+            <h2 class=" text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+            Check out my Portfolio
+            </h2>
+            <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+              Here's what I have done with the past
+            </h3>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 pt-12">
+              <!-- Card 1 -->
+              <div class="h-130 bg-white flex flex-col rounded-xl">
+                <img id="carousel1" src="assets/img/Keychain-1.png" alt="Graphic Design"
+                  class="w-full h-100 object-cover rounded-lg p-6">
+                <div class="p-8 flex flex-col flex-1">
+                  <!-- Category -->
+                  <p class="text-sm uppercase tracking-wide text-grey-10 font-semibold">
+                    Graphic Design
+                  </p>
+                  <!-- Title -->
+                  <h4 class="mt-4 text-3xl font-bold text-black">
+                    Bookmarks and Keychains
+                  </h4>
+
+                  <!-- Description -->
+                  <p class="mt-6 text-blog-gradient-to leading-relaxed text-md text-justify">
+                    Created bookmark and keychain designs used for God Embodied Movers Society (GEMS)
+                    fundraising initiatives during Kalibulung 2024 as part of the Multimedia Team.
+                  </p>
+
+                  <!-- Button -->
+                  <a href="https://drive.google.com/drive/folders/1BUaIM8N30kjF7wtYpnwPqwDCUfy23VwR?usp=sharing"
+                    target="_blank"
+                    class="mt-6 flex items-center flex flex-col rounded-md rounded-lg border-2 border-primary py-5
+                    text-xl font-semibold text-primary hover:bg-purple-50 transition hover:bg-primary hover:text-white">
+                    <span>View &nbsp;&nbsp;<span class="text-2xl">→</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="h-130 bg-white flex flex-col rounded-xl">
+                <img id="carousel2" src="assets/img/Media-1.png" alt="Multimedia"
+                  class="w-full h-100 object-cover rounded-lg p-6">
+                <div class="p-8 flex flex-col flex-1">
+                  <!-- Category -->
+                  <p class="text-sm uppercase tracking-wide text-grey-10 font-semibold">
+                    Graphic Design
+                  </p>
+                  <!-- Title -->
+                  <h4 class="mt-4 text-3xl font-bold text-black">
+                    Multimedia Materials
+                  </h4>
+
+                  <!-- Description -->
+                  <p class="mt-6 text-blog-gradient-to leading-relaxed text-md flex flex-col flex-1 text-justify">
+                    Designed and produced digital graphics and multimedia materials for church events and ministry
+                    initiatives, supporting effective communication, and fostering greater community engagement.
+                  </p>
+
+                  <!-- Button -->
+                  <a href="https://drive.google.com/drive/folders/1XRmdwEjVMoKunXsbn-xGugjZkRfsE25_?usp=sharing"
+                    target="_blank"
+                    class="mt-6 flex items-center flex flex-col rounded-md rounded-lg border-2 border-primary py-5
+                    text-xl font-semibold text-primary hover:bg-purple-50 transition hover:bg-primary hover:text-white">
+                    <span>View &nbsp;&nbsp;<span class="text-2xl">→</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="h-130 bg-white flex flex-col rounded-xl">
+                <img id="carousel3" src="assets/img/Tablet-1.png" alt="System Design"
+                  class="w-full h-100 object-cover rounded-lg p-6">
+                <div class="p-8 flex flex-col flex-1">
+                  <!-- Category -->
+                  <p class="text-sm uppercase tracking-wide text-grey-10 font-semibold">
+                    System Design
+                  </p>
+                  <!-- Title -->
+                  <h4 class="mt-4 text-3xl font-bold text-black">
+                    UI/UX Project Prototype
+                  </h4>
+
+                  <!-- Description -->
+                  <p class="mt-6 text-blog-gradient-to leading-relaxed text-md flex flex-col flex-1 text-justify">
+                    Designed and documented a system for Sirok Dine & Chill to fulfill course requirements
+                    in System Analysis and Design, incorporating business analysis, process modeling, and system
+                    planning techniques.
+                  </p>
+
+                  <!-- Button -->
+                  <a href="https://drive.google.com/drive/folders/1Zh299ofclQ0sueW104ZawPIvrpAqfQZr?usp=sharing"
+                    target="_blank"
+                    class="mt-6 flex items-center flex flex-col rounded-md rounded-lg border-2 border-primary py-5
+                    text-xl font-semibold text-primary hover:bg-purple-50 transition hover:bg-primary hover:text-white">
+                    <span>View &nbsp;&nbsp;<span class="text-2xl">→</span></span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="h-130 bg-white flex flex-col rounded-xl">
+                <img id="carousel4" src="assets/img/Certificate-1.jpg" alt="Certificate"
+                  class="w-full h-100 object-cover rounded-lg p-6">
+                <div class="p-8 flex flex-col flex-1">
+                  <!-- Category -->
+                  <p class="text-sm uppercase tracking-wide text-grey-10 font-semibold">
+                    Certificates
+                  </p>
+                  <!-- Title -->
+                  <h4 class="mt-4 text-3xl font-bold text-black">
+                    Completion and Recognition
+                  </h4>
+
+                  <!-- Description -->
+                  <p class="mt-6 text-blog-gradient-to leading-relaxed text-md flex flex-col flex-1 text-justify">
+                    A collection of certificates recognizing academic achievements, community service participation,
+                    and practical industry experience through work immersion and institutional programs.
+                  </p>
+
+                  <!-- Button -->
+                  <a href="https://drive.google.com/drive/folders/1Irnfc2HXAOZO7owEMKSgnPZy43zS-t4o?usp=sharing"
+                    target="_blank"
+                    class="mt-6 flex items-center flex flex-col rounded-md rounded-lg border-2 border-primary py-5
+                    text-xl font-semibold text-primary hover:bg-purple-50 transition hover:bg-primary hover:text-white">
+                    <span>View &nbsp;&nbsp;<span class="text-2xl">→</span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <script>
+          function createCarousel(id, images, interval = 3000) {
+            const img = document.getElementById(id);
+
+            if (!img || images.length === 0) return;
+
+            let current = 0;
+
+            setInterval(() => {
+              current = (current + 1) % images.length;
+              img.src = images[current];
+            }, interval);
+          }
+
+          createCarousel("carousel1", [
+            "assets/img/Keychain-1.png",
+            "assets/img/Bookmark-1.png",
+            "assets/img/Bookmark-2.png",
+          ]);
+
+          createCarousel("carousel2", [
+            "assets/img/Media-1.png",
+            "assets/img/Media-3.png",
+            "assets/img/Media-4.gif",
+          ]);
+
+          createCarousel("carousel3", [
+            "assets/img/Tablet-1.png",
+            "assets/img/Tablet-2.png",
+            "assets/img/Tablet-3.png",
+          ]);
+
+          createCarousel("carousel4", [
+            "assets/img/Certificate-1.jpg",
+            "assets/img/Certificate-2.jpg",
+            "assets/img/Certificate-3.png"
+          ]);
+        </script>
+
+        <div class="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24 bg-primary">
+          <div class="container ">
+            <div class="mt-auto w-11/12 bg-white py-16 shadow md:w-11/12 lg:py-20 xl:py-24 2xl:w-full rounded-xl">
+              <div class="grid grid-cols-2 gap-5 md:gap-8 xl:grid-cols-4 xl:gap-5 p-6">
+                <div class="flex flex-col items-center justify-center text-center md:flex-row md:text-left">
+                  <div>
+                    <img src="/assets/img/icon-project.svg" class="mx-auto h-12 w-auto md:h-20" alt="icon project" />
+                  </div>
+                  <div class="pt-5 md:pl-5 md:pt-0">
+                    <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
+                      12
+                    </h1>
+                    <h4 class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl">
+                      Finished Projects
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center text-center md:flex-row md:text-left">
+                  <div>
+                    <img src="/assets/img/icon-award.svg" class="mx-auto h-12 w-auto md:h-20" alt="icon award" />
+                  </div>
+                  <div class="pt-5 md:pl-5 md:pt-0">
+                    <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
+                      1
+                    </h1>
+                    <h4 class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl">
+                      Awards Won
+                    </h4>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0">
+                  <div>
+                    <img src="/assets/img/icon-happy.svg" class="mx-auto h-12 w-auto md:h-20"
+                      alt="icon happy clients" />
+                  </div>
+                  <div class="pt-5 md:pl-5 md:pt-0">
+                    <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
+                      8
+                    </h1>
+                    <h4 class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl">
+                      Happy Clients
+                    </h4>
+                  </div>
+                </div>
+
+                <div
+                  class="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0">
+                  <div>
+                    <img src="/assets/img/icon-puzzle.svg" class="mx-auto h-12 w-auto md:h-20" alt="icon puzzle" />
+                  </div>
+                  <div class="pt-5 md:pl-5 md:pt-0">
+                    <h1 class="font-body text-2xl font-bold text-primary md:text-4xl">
+                      99
+                    </h1>
+                    <h4 class="text-grey-dark font-header text-base font-medium leading-loose md:text-xl">
+                      Bugs Fixed
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container py-16 md:py-20" id="contact">
+          <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+            Here's a contact form
+          </h2>
+          <h4 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+            Have Any Questions?
+          </h4>
+          <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
+            <p class="font-body text-grey-10">
+              Let's connect! Whether you need assistance with a project,
+              have an opportunity to discuss, or simply want to learn more
+              about my work, feel free to send a message. I'll be happy to get in touch with you.
+            </p>
+          </div>
+
+          <!-- Form -->
+          <form action="https://formspree.io/f/mrewrvdk" method="post" class="mx-auto w-full pt-10 sm:w-3/4">
+            <div class="flex flex-col md:flex-row m-1">
+              <input name="name"
+                class="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5 border-2 border-primary"
+                placeholder="Name" type="text" id="name" />
+              <input name="email"
+                class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5 border-2 border-primary"
+                placeholder="Email" type="text" id="email" />
+            </div>
+            <textarea name="message"
+              class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8 border-2 border-primary"
+              placeholder="Message" id="message" cols="30" rows="10"></textarea>
+            <button class="mt-6 flex items-center justify-center rounded bg-white px-8 py-3 font-header border-2 border-primary rounded-xl 
+              text-lg font-bold uppercase text-primary hover:bg-primary hover:text-white" type="submit">
+              Send
+              <i class="bx bx-chevron-right relative -right-2 text-3xl"></i>
+            </button>
+          </form>
+
+          <div class="flex flex-col pt-16 lg:flex-row">
+            <div class="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3">
+              <div class="flex items-center">
+                <i class="bx bx-phone text-2xl text-grey-40"></i>
+                <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+                  My Phone
+                </p>
+              </div>
+              <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+                +63 950 658 5437
+              </p>
+            </div>
+            <div
+              class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2">
+              <div class="flex items-center">
+                <i class="bx bx-envelope text-2xl text-grey-40"></i>
+                <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+                  My Email
+                </p>
+              </div>
+              <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+                derlyncamino9@gmail.com
+              </p>
+            </div>
+            <div
+              class="w-full border-l-2 border-t-0 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3 lg:border-l-0 lg:border-t-2">
+              <div class="flex items-center">
+                <i class="bx bx-map text-2xl text-grey-40"></i>
+                <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
+                  My Address
+                </p>
+              </div>
+              <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
+                Carmen, Davao del Norte
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bg-primary">
+        <div class="container flex flex-col justify-between py-6 sm:flex-row">
+          <p class="text-center font-body text-white md:text-left">
+            © Derlyn Bless 2026. All rights reserved.
+          <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
+            <a href="https://www.facebook.com/db.rc.507" target="_blank">
+              <i class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
+            </a>
+            <a href="https://www.instagram.com/derl9026?igsh=cmZsaG5jbXN0cHZi" target="_blank" class="pl-4">
+              <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
+            </a>
+            <a href="https://ph.linkedin.com/in/derlyn-camino-623803411" target="_blank" class="pl-4">
+              <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
+            </a>
+            <a href="https://github.com/derlyncamino9-cloud" target="_blank" class="pl-4">
+              <i class="bx bxl-github text-2xl text-white hover:text-yellow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
