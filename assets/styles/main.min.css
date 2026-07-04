@@ -1351,10 +1351,6 @@ html {
   margin-top: 2rem;
 }
 
-.mt-auto {
-  margin-top: auto;
-}
-
 .block {
   display: block;
 }
@@ -2316,10 +2312,6 @@ html {
     width: 33.333333%;
   }
 
-  .md\:w-11\/12 {
-    width: 91.666667%;
-  }
-
   .md\:w-5\/6 {
     width: 83.333333%;
   }
@@ -2604,12 +2596,5 @@ html {
 
   .xl\:leading-9 {
     line-height: 2.25rem;
-  }
-}
-
-@media (min-width: 1536px) {
-
-  .\32xl\:w-full {
-    width: 100%;
   }
 }
